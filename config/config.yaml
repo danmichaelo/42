@@ -1,0 +1,16 @@
+--- 
+sru_url: "http://sru.bibsys.no/search/biblioholdings?"
+cql: bs.avdelingsamling="urealSamling42"
+oai_url: "http://alfa-a.bibsys.no/oai/repository?"
+namespaces: 
+  agls: "http://www.naa.gov.au/recordkeeping/gov_online/agls/1.2"
+  ags: "http://purl.org/agmes/1.1/"
+  dc: "http://purl.org/dc/elements/1.1/"
+  dcterms: "http://purl.org/dc/terms/"
+  marc: "info:lc/xmlns/marcxchange-v1"
+  marcxml: "http://www.loc.gov/MARC21/slim"
+  oai: "http://www.openarchives.org/OAI/2.0/"
+  oai_dc: "http://www.openarchives.org/OAI/2.0/oai_dc/"
+  srw: "http://www.loc.gov/zing/srw/"
+  xsi: "http://www.w3.org/2001/XMLSchema-instance"
+  xcql: "http://www.loc.gov/zing/cql/xcql/"

@@ -1,0 +1,70 @@
+'001': record_id
+'005': version
+'010':
+    subfield:
+        a: lccn
+'020':
+    subfield: 
+        a: isbn
+'080':
+    type: list
+    subfield: 
+        a: udc
+'082':
+    type: list
+    subfield: 
+        a: ddc
+'100':
+    key: author
+    type: list
+    subfield: 
+        a: name
+        0: authority
+'245':
+    subfield: 
+        a: title
+        b: subtitle
+        c: responsibility
+        n: numparts
+        p: partname
+'260':
+    subfield: 
+        a: place
+        b: publisher
+        c: year
+'300':
+    subfield: 
+        a: numpages
+        b: physical_details
+        c: dimensions
+'500':
+    subfield: 
+        a: note
+'650':
+    key: subject
+    type: list
+    subfield: 
+        a: name
+        # subject subdivision
+        v: form
+        x: general
+        y: chronological
+        z: geographic
+        2: source
+'653':
+    key: subject
+    type: list
+    subfield: 
+        a: name
+    fixed: 
+        source: uncontrolled
+'700':
+    key: author
+    type: list
+    subfield: 
+        a: name
+        0: authority
+
+'776':
+    subfield: 
+        w: electronic_record_id
