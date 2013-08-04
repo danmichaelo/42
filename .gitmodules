@@ -1,6 +1,6 @@
-[submodule "LibRDF"]
-	path = LibRDF
-	url = https://github.com/literarymachine/LibRDF.git
 [submodule "customxmlelement"]
 	path = customxmlelement
 	url = /home/git/customxmlelement.git
+[submodule "LibRDF"]
+	path = LibRDF
+	url = https://github.com/literarymachine/LibRDF.git
