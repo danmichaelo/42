@@ -13,7 +13,9 @@ class ObjectController extends BaseController {
         $perPage = intval(Input::get('perPage', Session::get('perPage', $defaultPerPage)));
         if ($perPage <= 0 || $perPage > 500) $perPage = $defaultPerPage;
         Session::put('perPage', $perPage);
-        $objects = Object::with('isbns', 'authors')->paginate($perPage);
+        $objects = Object::with('isbns', 'authors')
+            ->orderBy('location')
+            ->paginate($perPage);
         return View::make('object.index')
             ->with('title', 'Objekter')
             ->with('objects', $objects);

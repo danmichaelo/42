@@ -8,11 +8,7 @@
   @foreach ($objects as $object)
   <tr>
     <td>
-      <?php 
-        $isbn = $object->isbns->first(); 
-        $cover = $isbn ? '<img src="http://innhold.bibsys.no/bilde/forside/?size=stor&amp;id=' . $isbn->number . '.jpg" />' : '';
-        echo $cover;
-      ?>
+        <img src="http://folk.uio.no/umnbib/42/show_image.php?id={{ $object->bibsys_id }}" class="small-cover" />
     </td>
     <td>
       <a href="{{URL::action('ObjectController@show', $object->id)}}">
@@ -36,6 +32,8 @@
           }
         ?>
       @endforeach
+      <br />
+      FA {{$object->location}}
     </td>
   </tr>
   @endforeach
