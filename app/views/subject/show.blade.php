@@ -10,14 +10,12 @@
 </p>
 
 <h2>
-  Emne #{{$subjects[0]->id}} / {{$subjects[0]->label('nb')}}
+  Emne #{{$subject->id}} / {{$subject->label('nb')}}
 </h2>
 
 <p>
-@foreach ($subjects as $subject)
   {{$subject->label('nb')}} <span class="langname">(Norsk bokmål)</span><br />
   {{$subject->label('en')}} <span class="langname">(Engelsk)</span><br />
-@endforeach
 </p>
 
 

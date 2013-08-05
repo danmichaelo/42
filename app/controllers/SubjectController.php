@@ -147,7 +147,7 @@ class SubjectController extends BaseController {
             // Check for alternative forms:
 
             $ontologyUrl = 'http://folk.uio.no/kvalel/ont42.owl'; // ;42.biblionaut.net/rdf/ont42.owl';
-            $ont = new Ontology($ontologyUrl);
+            $ont = new Ontosaur($ontologyUrl);
             $ontData = $ont->lookupPrefLabel($label, 'nb');
             foreach ($ontData['altLabel'] as $label) {
                 $labels[] = $label; 

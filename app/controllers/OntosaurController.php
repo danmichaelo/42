@@ -9,7 +9,8 @@ class OntosaurController extends BaseController {
      */
     public function index()
     {
-        $srcUrl = 'http://folk.uio.no/kvalel/ont42.owl'; // ;42.biblionaut.net/rdf/ont42.owl';
+        //$srcUrl = 'http://folk.uio.no/kvalel/ont42.owl'; // ;42.biblionaut.net/rdf/ont42.owl';
+        $srcUrl = 'https://dl.dropboxusercontent.com/u/1007809/42/ont42.rdf';
         $ont = new Ontosaur($srcUrl);
         $warnings = $ont->warnings;
 
