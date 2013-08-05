@@ -119,10 +119,15 @@ td {
   vertical-align: top;
 }
 
-.objects img {
+img.small-cover {
   max-height: 100px;
   box-shadow: 1px 1px 3px #888;
 }
+img.medium-cover {
+  max-height: 200px;
+  box-shadow: 1px 1px 3px #888;
+}
+
 /*
 ====================================================================================================
 Simple Little Table by John Sardine and Orman Clark
@@ -282,3 +287,22 @@ nav.navigation, nav.navigation-mobile li { font-family: "WebServeroffRegular", H
 /* Slide Caption */
 .slide-caption,
 .slide-caption p { font-family: "WebServeroffRegular", Helvetica, Arial, sans-serif; }
+
+
+
+.object-list-outer {
+  position: absolute;
+  right: 0;
+  width: 500px;
+  margin-right:20px;
+}
+.object-list {
+  position: absolute;
+  top: 0;
+  margin-top: 20px;
+  padding-top: 20px;
+}
+.object-list.fixed {
+  position: fixed;
+  top: 0;
+}

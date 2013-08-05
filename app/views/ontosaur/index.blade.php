@@ -4,14 +4,11 @@
 @stop
 @section('container')
 
+<h3><a id="kilde">Kilde</a></h3>
 <p>
-    Kilde: <a href="{{ $src_url }}">{{{$src_url}}}</a>
+    URI: <a href="{{ $src_url }}">{{{$src_url}}}</a><br />
+    <a href="#mulige_problemer">{{ count($warnings) }} mulige problemer</a> ble oppdaget under parsing av filen.
 </p>
-@foreach ($warnings as $warn)
-<div class="alert alert-error">
-    {{$warn}}
-</div>
-@endforeach
 <p>
     Språk: 
     @foreach ($supported_languages as $code => $label)
@@ -19,12 +16,13 @@
     @endforeach
 </p>
 
-<div>
-<div class="object-list" style="float:right;width:500px;background:white;border-radius:4px;padding:8px;">
+<div class="object-list-outer">
+<div class="object-list"> 
 
 </div>
 </div>
 
+<h3><a id="kilde">Generert tre</a></h3>
 <div class="subject-tree">
 <?php
 
@@ -107,6 +105,14 @@ echo make_ul($tree, $labels, $lang, $label_map);
 ?>
 </div>
 
+<h3><a id="mulige_problemer">Mulige problemer med kildefilen</a></h3>
+@foreach ($warnings as $warn)
+<div class="alert alert-error">
+    {{$warn}}
+</div>
+@endforeach
+
+
 {{--
 @foreach ($labels as $key => $val)
 	{{ $val['nb'] }}
@@ -116,6 +122,22 @@ echo make_ul($tree, $labels, $lang, $label_map);
 <script type="text/javascript">
 
 $(document).ready(function() {
+
+
+    var $ol = $('.object-list');
+    var top = $ol.offset().top - parseFloat($ol.css('marginTop').replace(/auto/, 0));
+
+    $(window).scroll(function() {
+        var y = $(this).scrollTop();
+
+        if (y >= top) {
+            $ol.addClass('fixed');
+        } else {
+            $ol.removeClass('fixed');
+        }
+    });
+
+
 	$('.subject-tree a').on('click', function(e) {
 		e.preventDefault();
         var a = $(e.currentTarget),
@@ -171,8 +193,6 @@ $(document).ready(function() {
             //}
         }
 	});
-
-    $( '.object-list' ).scrollFollow(); 
 
 });
 
