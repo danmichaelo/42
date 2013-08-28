@@ -73,6 +73,10 @@ class SubjectController extends BaseController {
     {
   
         $subj = Subject::find($id);
+
+        // We should eventually do eager loading, something like this
+        //$subj = Subject::with('objects.subjects')->find($id);
+
 //        var_dump($subj->objects()->getQuery()->getSQL());
 
         if (!$subj) {
