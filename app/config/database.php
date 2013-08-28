@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'biblionaut.net',
-			'database'  => 'bibliona_42',
-			'username'  => 'bibliona_42',
-			'password'  => 'kakoFoni01',
+			'host'      => 'localhost',
+			'database'  => '42',
+			'username'  => '',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
